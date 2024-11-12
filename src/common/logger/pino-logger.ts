@@ -60,7 +60,7 @@ export class InternalLogger {
         );
     }
 
-    error(err: Error, message?: any) {
+    error(err: Error | string, message?: any) {
         return this._logger.error(
             { err },
             `[${this._appName}](${this._key}) ${message}`,

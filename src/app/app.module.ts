@@ -1,9 +1,10 @@
 import { Module } from '@nestjs/common';
-import * as Modules from '@/modules/user-connector'
+import * as Modules from '@/modules'
 import { PinoLogger } from './logger';
 
 
 let imports = [...Object.values(Modules)]
+
 let controllers;
 let providers = [
   {
